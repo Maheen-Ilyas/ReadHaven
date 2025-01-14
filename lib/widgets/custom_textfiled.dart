@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:readhaven/constants/theme.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -20,7 +21,7 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       style: const TextStyle(
         fontSize: 16.0,
-        color: Colors.white,
+        color: AppTheme.primayTextColor,
       ),
       obscureText: obscureText,
       cursorColor: Colors.black87,
@@ -28,19 +29,19 @@ class CustomTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: const TextStyle(
           fontSize: 16.0,
-          color: Color(0xff83899F),
+          color: AppTheme.secondaryTextColor,
         ),
         prefixIcon: prefixIcon,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(
-            color: Color(0xff83899F),
+            color: AppTheme.secondaryTextColor,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(
-            color: Color(0xff83899F),
+            color: AppTheme.secondaryTextColor,
           ),
         ),
       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readhaven/constants/app_constants.dart';
+import 'package:readhaven/constants/routes.dart';
+import 'package:readhaven/constants/theme.dart';
 import 'package:readhaven/controller/enter_name_controller.dart';
 import 'package:readhaven/widgets/custom_textfiled.dart';
 
@@ -30,7 +32,7 @@ class _EnterNameState extends State<EnterName> {
                     child: Text(
                       "What do we call you?",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 32.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -41,7 +43,7 @@ class _EnterNameState extends State<EnterName> {
                     "Enter your preferred name to proceed.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xff83899F),
+                      color: AppTheme.secondaryTextColor,
                       fontSize: 20.0,
                     ),
                   ),
@@ -51,7 +53,7 @@ class _EnterNameState extends State<EnterName> {
                     child: Text(
                       "Name",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -64,7 +66,7 @@ class _EnterNameState extends State<EnterName> {
                     obscureText: false,
                     prefixIcon: Icon(
                       Icons.person,
-                      color: Color(0xff83899F),
+                      color: AppTheme.alternateIconColor,
                       size: 24.0,
                     ),
                   ),
@@ -72,10 +74,10 @@ class _EnterNameState extends State<EnterName> {
                   ElevatedButton(
                     onPressed: () {
                       // controller.fieldVerification(context);
-                      Get.toNamed('/addbook');
+                      Get.toNamed(addBookRoute);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff8C31FF),
+                      backgroundColor: AppTheme.buttonColor,
                       minimumSize: Size(double.infinity, screenHeight * 0.062),
                       shape: ContinuousRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
@@ -84,7 +86,7 @@ class _EnterNameState extends State<EnterName> {
                     child: Text(
                       "Next",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),

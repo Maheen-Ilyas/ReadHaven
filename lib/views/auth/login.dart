@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readhaven/constants/app_constants.dart';
+import 'package:readhaven/constants/routes.dart';
+import 'package:readhaven/constants/theme.dart';
 import 'package:readhaven/controller/login_controller.dart';
 import 'package:readhaven/widgets/custom_textfiled.dart';
 
@@ -29,7 +31,7 @@ class _LoginState extends State<Login> {
                     "Welcome back!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppTheme.primayTextColor,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -39,7 +41,7 @@ class _LoginState extends State<Login> {
                     "Login to continue reading your favorite books.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xff83899F),
+                      color: AppTheme.secondaryTextColor,
                       fontSize: 20.0,
                     ),
                   ),
@@ -49,7 +51,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Email Address",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -62,7 +64,7 @@ class _LoginState extends State<Login> {
                     obscureText: false,
                     prefixIcon: Icon(
                       Icons.alternate_email_rounded,
-                      color: Color(0xff83899F),
+                      color: AppTheme.alternateIconColor,
                       size: 24.0,
                     ),
                   ),
@@ -72,7 +74,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Password",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -85,7 +87,7 @@ class _LoginState extends State<Login> {
                     obscureText: true,
                     prefixIcon: Icon(
                       Icons.pin_rounded,
-                      color: Color(0xff83899F),
+                      color: AppTheme.alternateIconColor,
                       size: 28.0,
                     ),
                   ),
@@ -97,7 +99,7 @@ class _LoginState extends State<Login> {
                       child: Text(
                         "Forgot Password?",
                         style: TextStyle(
-                          color: Color(0xff83899F),
+                          color: AppTheme.secondaryTextColor,
                           fontSize: 16.0,
                           fontWeight: FontWeight.w500,
                         ),
@@ -110,7 +112,7 @@ class _LoginState extends State<Login> {
                       controller.fieldVerification(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff8C31FF),
+                      backgroundColor: AppTheme.buttonColor,
                       minimumSize: Size(double.infinity, screenHeight * 0.062),
                       shape: ContinuousRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
@@ -119,7 +121,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),
@@ -127,12 +129,12 @@ class _LoginState extends State<Login> {
                   ),
                   SizedBox(height: screenHeight * 0.018),
                   GestureDetector(
-                    onTap: () => Get.toNamed('/signup'),
+                    onTap: () => Get.toNamed(signupRoute),
                     child: Text(
                       "Don't have an account? Sign up here!",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xff83899F),
+                        color: AppTheme.secondaryTextColor,
                         fontSize: 16.0,
                         fontWeight: FontWeight.w500,
                       ),

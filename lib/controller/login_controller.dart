@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:readhaven/constants/theme.dart';
 
 class LoginController extends GetxController {
   final TextEditingController emailController = TextEditingController();
@@ -17,11 +18,11 @@ class LoginController extends GetxController {
       if (emailController.text.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            backgroundColor: const Color(0xff14161B),
+            backgroundColor: AppTheme.backgroundColor,
             content: Text(
               'Please enter your email.',
               style: TextStyle(
-                color: Color(0xff83899F),
+                color: AppTheme.secondaryTextColor,
                 fontSize: 16.0,
               ),
             ),
@@ -30,11 +31,11 @@ class LoginController extends GetxController {
       } else if (passwordController.text.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            backgroundColor: const Color(0xff14161B),
+            backgroundColor: AppTheme.backgroundColor,
             content: Text(
               'Please enter your password.',
               style: TextStyle(
-                color: Color(0xff83899F),
+                color: AppTheme.secondaryTextColor,
                 fontSize: 16.0,
               ),
             ),
@@ -43,11 +44,11 @@ class LoginController extends GetxController {
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            backgroundColor: const Color(0xff14161B),
+            backgroundColor: AppTheme.backgroundColor,
             content: Text(
               'Enter all your details.',
               style: TextStyle(
-                color: Color(0xff83899F),
+                color: AppTheme.secondaryTextColor,
                 fontSize: 16.0,
               ),
             ),

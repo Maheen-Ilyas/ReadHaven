@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readhaven/constants/app_constants.dart';
+import 'package:readhaven/constants/theme.dart';
 
 class AddBook extends StatefulWidget {
   const AddBook({super.key});
@@ -29,7 +30,7 @@ class _AddBookState extends State<AddBook> {
               ),
               child: Icon(
                 Icons.arrow_back_rounded,
-                color: Colors.white,
+                color: AppTheme.iconColor,
               ),
             ),
           ),
@@ -48,7 +49,7 @@ class _AddBookState extends State<AddBook> {
                     "Upload your favorite book and start your journey!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppTheme.primayTextColor,
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -58,7 +59,7 @@ class _AddBookState extends State<AddBook> {
                     "You can upload your favorite book in .epub format",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xff83899F),
+                      color: AppTheme.secondaryTextColor,
                       fontSize: 20.0,
                     ),
                   ),
@@ -66,7 +67,7 @@ class _AddBookState extends State<AddBook> {
                   ElevatedButton.icon(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff8C31FF),
+                      backgroundColor: AppTheme.buttonColor,
                       minimumSize: Size(double.infinity, screenHeight * 0.062),
                       shape: ContinuousRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
@@ -74,7 +75,7 @@ class _AddBookState extends State<AddBook> {
                     ),
                     icon: Container(
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: AppTheme.iconColor,
                         borderRadius: BorderRadius.all(
                           Radius.circular(4.0),
                         ),
@@ -85,7 +86,7 @@ class _AddBookState extends State<AddBook> {
                     label: Text(
                       "Add new book",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),

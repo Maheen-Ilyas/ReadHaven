@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readhaven/constants/app_constants.dart';
+import 'package:readhaven/constants/routes.dart';
+import 'package:readhaven/constants/theme.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -27,7 +29,7 @@ class _OnboardingState extends State<Onboarding> {
                 "Read your favorite books anywhere!",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppTheme.primayTextColor,
                   fontSize: 36.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -37,15 +39,15 @@ class _OnboardingState extends State<Onboarding> {
                 "Download your epub files and start reading.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0xff83899F),
+                  color: AppTheme.secondaryTextColor,
                   fontSize: 20.0,
                 ),
               ),
               SizedBox(height: screenHeight * 0.06),
               ElevatedButton(
-                onPressed: () => Get.toNamed('/login'),
+                onPressed: () => Get.toNamed(loginRoute),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff8C31FF),
+                  backgroundColor: AppTheme.buttonColor,
                   minimumSize: Size(double.infinity, screenHeight * 0.062),
                   shape: ContinuousRectangleBorder(
                     borderRadius: BorderRadius.circular(0.0),
@@ -54,7 +56,7 @@ class _OnboardingState extends State<Onboarding> {
                 child: Text(
                   "Get Started",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.primayTextColor,
                     fontSize: 18.0,
                     fontWeight: FontWeight.w600,
                   ),

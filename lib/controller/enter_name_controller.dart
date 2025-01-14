@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:readhaven/constants/theme.dart';
 
 class EnterNameController extends GetxController {
   final TextEditingController nameControlller = TextEditingController();
@@ -14,11 +15,11 @@ class EnterNameController extends GetxController {
     if (nameControlller.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          backgroundColor: const Color(0xff14161B),
+          backgroundColor: AppTheme.backgroundColor,
           content: Text(
             'Please enter your name.',
             style: TextStyle(
-              color: Color(0xff83899F),
+              color: AppTheme.secondaryTextColor,
               fontSize: 16.0,
             ),
           ),

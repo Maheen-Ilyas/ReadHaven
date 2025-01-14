@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readhaven/constants/app_constants.dart';
+import 'package:readhaven/constants/routes.dart';
+import 'package:readhaven/constants/theme.dart';
 import 'package:readhaven/controller/signup_controller.dart';
 import 'package:readhaven/widgets/custom_textfiled.dart';
 
@@ -30,7 +32,7 @@ class _SignupState extends State<Signup> {
                     "Welcome!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppTheme.primayTextColor,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -40,7 +42,7 @@ class _SignupState extends State<Signup> {
                     "Sign up add your favorite books and start reading.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xff83899F),
+                      color: AppTheme.secondaryTextColor,
                       fontSize: 20.0,
                     ),
                   ),
@@ -50,7 +52,7 @@ class _SignupState extends State<Signup> {
                     child: Text(
                       "Email Address",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -63,7 +65,7 @@ class _SignupState extends State<Signup> {
                     obscureText: false,
                     prefixIcon: Icon(
                       Icons.alternate_email_rounded,
-                      color: Color(0xff83899F),
+                      color: AppTheme.alternateIconColor,
                       size: 24.0,
                     ),
                   ),
@@ -73,7 +75,7 @@ class _SignupState extends State<Signup> {
                     child: Text(
                       "Password",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -86,7 +88,7 @@ class _SignupState extends State<Signup> {
                     obscureText: true,
                     prefixIcon: Icon(
                       Icons.pin_rounded,
-                      color: Color(0xff83899F),
+                      color: AppTheme.alternateIconColor,
                       size: 28.0,
                     ),
                   ),
@@ -96,7 +98,7 @@ class _SignupState extends State<Signup> {
                     child: Text(
                       "Confirm Password",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -109,7 +111,7 @@ class _SignupState extends State<Signup> {
                     obscureText: true,
                     prefixIcon: Icon(
                       Icons.pin_rounded,
-                      color: Color(0xff83899F),
+                      color: AppTheme.alternateIconColor,
                       size: 28.0,
                     ),
                   ),
@@ -117,10 +119,10 @@ class _SignupState extends State<Signup> {
                   ElevatedButton(
                     onPressed: () {
                       // controller.fieldVerification(context);
-                      Get.toNamed('/name');
+                      Get.toNamed(enterNameRoute);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff8C31FF),
+                      backgroundColor: AppTheme.buttonColor,
                       minimumSize: Size(double.infinity, screenHeight * 0.062),
                       shape: ContinuousRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
@@ -129,7 +131,7 @@ class _SignupState extends State<Signup> {
                     child: Text(
                       "Sign up",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.primayTextColor,
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
                       ),
@@ -137,12 +139,12 @@ class _SignupState extends State<Signup> {
                   ),
                   SizedBox(height: screenHeight * 0.018),
                   GestureDetector(
-                    onTap: () => Get.toNamed('/login'),
+                    onTap: () => Get.toNamed(loginRoute),
                     child: Text(
                       "Already have an account? Login here!",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xff83899F),
+                        color: AppTheme.secondaryTextColor,
                         fontSize: 16.0,
                         fontWeight: FontWeight.w500,
                       ),
