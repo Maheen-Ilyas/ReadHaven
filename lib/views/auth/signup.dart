@@ -31,7 +31,7 @@ class _SignupState extends State<Signup> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 36.0,
+                      fontSize: 32.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

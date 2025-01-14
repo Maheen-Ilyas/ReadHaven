@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:readhaven/views/auth/enter_name.dart';
 import 'package:readhaven/views/auth/login.dart';
 import 'package:readhaven/views/auth/signup.dart';
+import 'package:readhaven/views/onboarding/add_book.dart';
 import 'package:readhaven/views/onboarding/onboarding.dart';
 
 void main() {
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/login', page: () => const Login()),
         GetPage(name: '/signup', page: () => const Signup()),
         GetPage(name: '/name', page: () => const EnterName()),
+        GetPage(name: '/addbook', page: () => const AddBook()),
       ],
       debugShowCheckedModeBanner: false,
       home: const Onboarding(),

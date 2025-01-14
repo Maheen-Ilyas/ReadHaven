@@ -31,7 +31,7 @@ class _EnterNameState extends State<EnterName> {
                       "What do we call you?",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 36.0,
+                        fontSize: 32.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -71,7 +71,8 @@ class _EnterNameState extends State<EnterName> {
                   SizedBox(height: screenHeight * 0.06),
                   ElevatedButton(
                     onPressed: () {
-                      controller.fieldVerification(context);
+                      // controller.fieldVerification(context);
+                      Get.toNamed('/addbook');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xff8C31FF),
