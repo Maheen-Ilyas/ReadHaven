@@ -24,7 +24,7 @@ class CustomTextField extends StatelessWidget {
         color: AppTheme.primayTextColor,
       ),
       obscureText: obscureText,
-      cursorColor: Colors.black87,
+      cursorColor: AppTheme.primayTextColor,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(

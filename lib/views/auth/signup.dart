@@ -118,8 +118,7 @@ class _SignupState extends State<Signup> {
                   SizedBox(height: screenHeight * 0.06),
                   ElevatedButton(
                     onPressed: () {
-                      // controller.fieldVerification(context);
-                      Get.toNamed(enterNameRoute);
+                      controller.fieldVerificationAndSignup(context);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.buttonColor,

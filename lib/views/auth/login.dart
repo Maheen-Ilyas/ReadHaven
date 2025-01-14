@@ -108,8 +108,8 @@ class _LoginState extends State<Login> {
                   ),
                   SizedBox(height: screenHeight * 0.06),
                   ElevatedButton(
-                    onPressed: () {
-                      controller.fieldVerification(context);
+                    onPressed: () async {
+                      controller.fieldVerificationAndLogin(context);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.buttonColor,
