@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:readhaven/constants/app_constants.dart';
 
 class Onboarding extends StatefulWidget {
@@ -18,8 +19,8 @@ class _OnboardingState extends State<Onboarding> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: screenHeight * 0.05),
               Image.asset('assets/book.png'),
               SizedBox(height: screenHeight * 0.06),
               Text(
@@ -42,7 +43,7 @@ class _OnboardingState extends State<Onboarding> {
               ),
               SizedBox(height: screenHeight * 0.06),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.toNamed('/login'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xff8C31FF),
                   minimumSize: Size(double.infinity, screenHeight * 0.062),

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:readhaven/views/auth/enter_name.dart';
+import 'package:readhaven/views/auth/login.dart';
+import 'package:readhaven/views/auth/signup.dart';
 import 'package:readhaven/views/onboarding/onboarding.dart';
 
 void main() {
@@ -11,7 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Read Haven',
       theme: ThemeData(
         fontFamily: GoogleFonts.dmSans().fontFamily,
@@ -21,6 +25,11 @@ class MyApp extends StatelessWidget {
           surfaceTintColor: const Color(0xff14161B),
         ),
       ),
+      getPages: [
+        GetPage(name: '/login', page: () => const Login()),
+        GetPage(name: '/signup', page: () => const Signup()),
+        GetPage(name: '/name', page: () => const EnterName()),
+      ],
       debugShowCheckedModeBanner: false,
       home: const Onboarding(),
     );
